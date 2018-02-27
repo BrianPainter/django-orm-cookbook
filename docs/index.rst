@@ -18,6 +18,18 @@ Django ORM Cookbook
    subquery
    database_view
    inspect_existing_database
+   create
+   read
+   update
+   delete
+   aggregation_function
+   prefetch_related
+   select_related
+   query_related_tools
+   methods_objects
+   methods_querysets
+   field_lookups
+   exception_orm
 
 
 Indices and tables
