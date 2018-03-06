@@ -1,11 +1,4 @@
 from django.contrib import admin
-
-
-from django.contrib.auth.models import User, Group
-
-
-
-
 from django.contrib.admin import AdminSite
 from .models import Epic, Event, EventHero, EventVillain
 
@@ -14,7 +7,6 @@ class EventAdminSite(AdminSite):
     site_header = "UMSRA Events Admin2"
     site_title = "UMSRA Events Admin Portal"
     index_title = "Welcome to UMSRA Researcher Events Portal"
-
 
     def get_app_list(self, request):
         """
@@ -40,8 +32,10 @@ class EventAdminSite(AdminSite):
 
 event_admin_site = EventAdminSite(name='event_admin')
 
+
 class EventAdmin(admin.ModelAdmin):
     list_display = ('id', 'epic', 'years_ago')
+
     class Meta:
         model = Event
 

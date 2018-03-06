@@ -29,8 +29,6 @@ class Entity(models.Model):
     alternative_name = models.CharField(
         max_length=100, null=True, blank=True
     )
-
-
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     origin = models.ForeignKey(Origin, on_delete=models.CASCADE)
     gender = models.CharField(
@@ -42,9 +40,7 @@ class Entity(models.Model):
         )
     )
     description = models.TextField()
-
-    added_by = models.ForeignKey(settings.AUTH_USER_MODEL,
-        null=True, blank=True, on_delete=models.SET_NULL)
+    added_by = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL)
     added_on = models.DateField(auto_now=True)
 
     def __str__(self):
@@ -86,6 +82,7 @@ class HeroProxy(Hero):
 
     class Meta:
         proxy = True
+
 
 class Villain(Entity):
     is_immortal = models.BooleanField(default=False)

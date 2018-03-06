@@ -2,6 +2,7 @@ from django.db import models
 from entities.models import Hero, Villain
 import uuid
 
+
 class Epic(models.Model):
     name = models.CharField(max_length=255)
     participating_heroes = models.ManyToManyField(Hero)
