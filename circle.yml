@@ -1,12 +1,4 @@
+version: 2
 test:
-  pre:
-    - mkdir media
   override:
-    - flake8 --ignore=E501,E731 bodhi/
-    - flake8 --ignore=E501,E731 db/
-    - flake8 --ignore=E501,E731 db_user/
-    - flake8 --ignore=E501,E731 big_query/
-    - python manage.py test db --settings=bodhibi.prod
-    - python manage.py test db_user --settings=bodhibi.prod
-    - karma start --single-run
-    - protractor protractor/conf.js
+    - flake8 --ignore=E501,E731
