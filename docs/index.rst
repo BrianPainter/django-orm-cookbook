@@ -55,7 +55,7 @@ Querying and Filtering
    random
    func_expressions
 
-Orderting things
+Ordering things
 ========================
 
 .. toctree::
@@ -69,7 +69,7 @@ Orderting things
    order_by_annotated_field
 
 
-Object Creation, Updation and Deletion
+Object Creation, Update and Deletion
 ===============================================
 
 .. toctree::
